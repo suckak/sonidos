@@ -57,6 +57,40 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.social-footer {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.social-footer p {
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+}
+.social-footer .social-footer-icons ul {
+  display: flex;
+  list-style: none;
+}
+.social-footer .social-footer-icons li {
+  margin-right: 1.5em;
+}
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: white;
+}
+.social-footer .social-footer-icons .fa:hover {
+  color: #000;
+  transition: color 0.3s ease-in;
+}
+
 @media (min-width: 700px) {
   body {
     place-items: center;

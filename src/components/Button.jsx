@@ -1,47 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Howl } from 'howler';
-
 import speaker from '../assets/speaker.svg';
 import './Button.scss';
 
 function Button(props) {
-  const { name, soundDir } = props;
-  const [sound, setSound] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  useEffect(() => {
-    setSound(
-      new Howl({
-        src: [soundDir],
-        html5: true,
-        autoplay: false,
-      })
-    );
-  }, []);
-
-  useEffect(() => {
-    if (sound) {
-      sound.on('end', function () {
-        setIsPlaying(false);
-      });
-      return () => {
-        sound.off('end');
-      };
-    }
-  }, [sound]);
-
-  if (!sound) {
-    return <p>loading...</p>;
-  }
-
+  const { name, onClick, isPlaying } = props;
   function handleClick() {
-    if (isPlaying) {
-      setIsPlaying(false);
-      sound.stop();
-    } else {
-      setIsPlaying(true);
-      sound.play();
-    }
+    onClick();
   }
 
   return (
