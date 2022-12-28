@@ -1,0 +1,14 @@
+#root {
+  min-height: 90vh;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}

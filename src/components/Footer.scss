@@ -1,0 +1,40 @@
+$dark-gray: #333;
+.social-footer {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+
+  p {
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+  }
+
+  .social-footer-icons {
+    ul {
+      display: flex;
+      list-style: none;
+    }
+    li {
+      margin-right: 1.5em;
+    }
+    li:last-of-type {
+      margin-right: 0;
+    }
+
+    .fa {
+      font-size: 1.3rem;
+      color: white;
+
+      &:hover {
+        color: darken($dark-gray, 25%);
+        transition: color 0.3s ease-in;
+      }
+    }
+  }
+}
