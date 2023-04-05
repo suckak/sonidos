@@ -3,6 +3,7 @@ import { Howl } from 'howler';
 
 import './App.css';
 import Button from './components/Button';
+import Slider from './components/Slider';
 import { sounds } from './utils/constants';
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
   };
 
   useEffect(() => {
+    console.log('effe');
     if (sound) {
+      console.log('effe sound');
       setIsPlaying(true);
       sound.play();
       sound.on('end', function () {
@@ -49,6 +52,7 @@ function App() {
     <>
       <div className='App'>
         <h1>Sonidos</h1>
+        <Slider />
         <div className='buttons-container'>
           {sounds.map((sound, index) => (
             <Button
